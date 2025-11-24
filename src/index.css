@@ -8,48 +8,48 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 5%;
-    --foreground: 45 20% 95%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 45 20% 95%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 45 20% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
 
-    --primary: 45 100% 50%;
-    --primary-foreground: 0 0% 5%;
+    --primary: 45 100% 45%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 45 20% 95%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 45 10% 60%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
 
-    --accent: 45 100% 50%;
-    --accent-foreground: 0 0% 5%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 45 20% 95%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 45 100% 50%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 45 100% 45%;
 
     --radius: 0.5rem;
 
-    /* Gold gradient colors */
-    --gold-start: 45 100% 50%;
-    --gold-mid: 43 95% 55%;
-    --gold-end: 41 90% 60%;
+    /* Gold gradient colors - Adjusted for Light Theme */
+    --gold-start: 45 100% 45%;
+    --gold-mid: 43 95% 50%;
+    --gold-end: 41 90% 55%;
 
     /* Gradients */
     --gradient-gold: linear-gradient(135deg, hsl(var(--gold-start)), hsl(var(--gold-mid)), hsl(var(--gold-end)));
-    --gradient-gold-subtle: linear-gradient(to right, hsl(var(--gold-start) / 0.1), hsl(var(--gold-end) / 0.1));
+    --gradient-gold-subtle: linear-gradient(to right, hsl(var(--gold-start) / 0.2), hsl(var(--gold-end) / 0.2));
     
     /* Shadows */
-    --shadow-gold: 0 10px 40px -10px hsl(var(--gold-start) / 0.3);
-    --shadow-elegant: 0 20px 60px -10px hsl(0 0% 0% / 0.5);
+    --shadow-gold: 0 10px 40px -10px hsl(var(--gold-start) / 0.4);
+    --shadow-elegant: 0 20px 60px -10px hsl(0 0% 0% / 0.1);
 
     /* Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
