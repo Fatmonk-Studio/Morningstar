@@ -39,7 +39,7 @@ const Footer = () => {
               {sisterConcerns.map((concern, index) => (
                 <li key={index}>
                   <a
-                    href={concern.url}
+                    // href={concern.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-gold-start transition-colors text-sm"

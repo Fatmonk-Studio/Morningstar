@@ -34,7 +34,7 @@ const Navbar = () => {
     { label: "About", id: "about" },
     { label: "Sister Concerns", id: "sister-concerns" },
     { label: "Business", id: "business-verticals" },
-    { label: "Leadership", id: "leadership" },
+    // { label: "Leadership", id: "leadership" },
     { label: "Contact", id: "contact" },
   ];
 
