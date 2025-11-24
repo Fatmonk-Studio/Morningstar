@@ -38,7 +38,7 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
-    /* Gold gradient colors - Adjusted for Light Theme */
+    /* Gold gradient colors */
     --gold-start: 45 100% 45%;
     --gold-mid: 43 95% 50%;
     --gold-end: 41 90% 55%;

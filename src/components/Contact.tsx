@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { SlideUp, FadeIn } from "@/components/ui/animations";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -40,18 +41,22 @@ const Contact = () => {
     <section id="contact" className="py-24 px-6 bg-secondary/30">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-gold bg-clip-text text-transparent">
-            Get In Touch
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Let's discuss how Morningstar Limited can add value to your business
-          </p>
+          <SlideUp>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-gold bg-clip-text text-transparent">
+              Get In Touch
+            </h2>
+          </SlideUp>
+          <SlideUp delay={0.2}>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Let's discuss how Morningstar Limited can add value to your business
+            </p>
+          </SlideUp>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
 
           {/* Contact Information */}
-          <div className="space-y-8">
+          <FadeIn delay={0.4} className="space-y-8">
             <Card className="p-6 bg-card border-border hover:border-gold-start/50 transition-all">
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-lg bg-gradient-gold-subtle">
@@ -105,62 +110,64 @@ const Contact = () => {
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
-          </div>
+          </FadeIn>
 
 
           {/* Contact Form */}
-          <Card className="p-8 bg-card border-border">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                  Name
-                </label>
-                <Input
-                  id="name"
-                  placeholder="Your name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="bg-background border-border focus:border-gold-start"
-                />
-              </div>
+          <FadeIn delay={0.6}>
+            <Card className="p-8 bg-card border-border h-full">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    Name
+                  </label>
+                  <Input
+                    id="name"
+                    placeholder="Your name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="bg-background border-border focus:border-gold-start"
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                  Email
-                </label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="your.email@example.com"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="bg-background border-border focus:border-gold-start"
-                />
-              </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    Email
+                  </label>
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="your.email@example.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="bg-background border-border focus:border-gold-start"
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                  Message
-                </label>
-                <Textarea
-                  id="message"
-                  placeholder="Tell us about your inquiry..."
-                  rows={6}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="bg-background border-border focus:border-gold-start resize-none"
-                />
-              </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                    Message
+                  </label>
+                  <Textarea
+                    id="message"
+                    placeholder="Tell us about your inquiry..."
+                    rows={6}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    className="bg-background border-border focus:border-gold-start resize-none"
+                  />
+                </div>
 
-              <Button
-                type="submit"
-                className="w-full bg-gradient-gold text-primary-foreground hover:opacity-90 transition-opacity shadow-gold"
-                size="lg"
-              >
-                Send Message
-              </Button>
-            </form>
-          </Card>
+                <Button
+                  type="submit"
+                  className="w-full bg-gradient-gold text-primary-foreground hover:opacity-90 transition-opacity shadow-gold"
+                  size="lg"
+                >
+                  Send Message
+                </Button>
+              </form>
+            </Card>
+          </FadeIn>
         </div>
       </div>
     </section>

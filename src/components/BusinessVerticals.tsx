@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Store, Briefcase, Plane, Building2, Shirt, Package } from "lucide-react";
+import { SlideUp, StaggerContainer, StaggerItem } from "@/components/ui/animations";
 
 const BusinessVerticals = () => {
   const verticals = [
@@ -39,39 +40,44 @@ const BusinessVerticals = () => {
     <section id="business-verticals" className="py-24 px-6 bg-secondary/30">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-gold bg-clip-text text-transparent">
-            Business Verticals
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Diverse sectors unified by our commitment to excellence and innovation
-          </p>
+          <SlideUp>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-gold bg-clip-text text-transparent">
+              Business Verticals
+            </h2>
+          </SlideUp>
+          <SlideUp delay={0.2}>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Diverse sectors unified by our commitment to excellence and innovation
+            </p>
+          </SlideUp>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {verticals.map((vertical, index) => {
             const Icon = vertical.icon;
             return (
-              <Card
-                key={index}
-                className="p-6 bg-card border-border hover:border-gold-start/50 transition-all duration-300 hover:shadow-gold group"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 rounded-lg bg-gradient-gold-subtle flex-shrink-0">
-                    <Icon className="h-6 w-6 text-gold-start group-hover:scale-110 transition-transform duration-300" />
+              <StaggerItem key={index}>
+                <Card
+                  className="p-6 bg-card border-border hover:border-gold-start/50 transition-all duration-300 hover:shadow-gold group h-full"
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="p-3 rounded-lg bg-gradient-gold-subtle flex-shrink-0">
+                      <Icon className="h-6 w-6 text-gold-start group-hover:scale-110 transition-transform duration-300" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-gold-start transition-colors">
+                        {vertical.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {vertical.description}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-gold-start transition-colors">
-                      {vertical.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {vertical.description}
-                    </p>
-                  </div>
-                </div>
-              </Card>
+                </Card>
+              </StaggerItem>
             );
           })}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );
