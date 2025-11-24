@@ -1,7 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, ShoppingBag, TrendingUp, Globe } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { SlideUp, StaggerContainer, StaggerItem } from "@/components/ui/animations";
+import morningstarLogo from "@/assets/morningstar_logo.jpg";
+import bojroLogo from "@/assets/bojro_logo.jpg";
+import influencewearLogo from "@/assets/influencewear_logo.jpg";  
 
 const SisterConcerns = () => {
   const concerns = [
@@ -9,21 +12,21 @@ const SisterConcerns = () => {
       name: "Bojro Store",
       url: "https://bojro.store",
       description: "Premium e-commerce platform delivering quality products with exceptional customer service.",
-      icon: ShoppingBag,
+      icon: bojroLogo,
       color: "from-blue-500 to-cyan-500",
     },
     {
       name: "Influencewear Store",
       url: "https://influencewear.store",
       description: "Fashion-forward apparel and lifestyle brand inspired by modern influencer culture.",
-      icon: TrendingUp,
+      icon: influencewearLogo,
       color: "from-pink-500 to-rose-500",
     },
     {
       name: "Morningstar International",
       url: "https://morningstar-international.com",
       description: "Global trade and consulting services connecting businesses across continents.",
-      icon: Globe,
+      icon: morningstarLogo,
       color: "from-emerald-500 to-teal-500",
     },
   ];
@@ -46,14 +49,17 @@ const SisterConcerns = () => {
 
         <StaggerContainer className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {concerns.map((concern, index) => {
-            const Icon = concern.icon;
             return (
               <StaggerItem key={index}>
                 <Card
                   className="p-8 bg-card border-border hover:border-gold-start/50 transition-all duration-500 hover:shadow-gold group hover:-translate-y-2 h-full flex flex-col"
                 >
-                  <div className={`mb-6 inline-flex p-4 rounded-lg bg-gradient-to-br ${concern.color} bg-opacity-10 w-fit`}>
-                    <Icon className="h-10 w-10 text-foreground group-hover:scale-110 transition-transform duration-300" />
+                  <div className={`mb-6 inline-flex p-1 rounded-lg bg-gradient-to-br ${concern.color} bg-opacity-10 w-fit`}>
+                    <img 
+                      src={concern.icon} 
+                      alt={`${concern.name} logo`} 
+                      className="h-24 w-24 object-contain group-hover:scale-110 transition-transform duration-300 rounded-md" 
+                    />
                   </div>
                   <h3 className="text-2xl font-semibold mb-4 text-foreground group-hover:text-gold-start transition-colors">
                     {concern.name}
@@ -64,9 +70,10 @@ const SisterConcerns = () => {
                   <Button
                     variant="outline"
                     className="w-full group-hover:bg-gradient-gold group-hover:text-primary-foreground group-hover:border-transparent transition-all"
-                    onClick={() => window.open(concern.url, "_blank")}
+                    // onClick={() => window.open(concern.url, "_blank")}
                   >
-                    Visit Website
+                    {/* Visit Website */}
+                    Coming Soon...
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
                 </Card>

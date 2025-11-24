@@ -31,10 +31,9 @@ const HeroBackground = () => {
       constructor() {
         this.x = Math.random() * canvas!.width;
         this.y = Math.random() * canvas!.height;
-        this.vx = (Math.random() - 0.5) * 0.3; // Slower movement
+        this.vx = (Math.random() - 0.5) * 0.3; 
         this.vy = (Math.random() - 0.5) * 0.3;
-        this.size = Math.random() * 3 + 1.5; // Larger particles
-        // Darker gold/orange for better contrast on light theme
+        this.size = Math.random() * 3 + 1.5; 
         this.color = `hsla(45, 100%, 40%, ${Math.random() * 0.6 + 0.4})`; 
       }
 
@@ -51,10 +50,10 @@ const HeroBackground = () => {
         const dy = mouse.y - this.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        if (distance < 200) { // Increased interaction radius
+        if (distance < 200) { 
           const angle = Math.atan2(dy, dx);
           const force = (200 - distance) / 200;
-          const pushX = Math.cos(angle) * force * 1.5; // Stronger push
+          const pushX = Math.cos(angle) * force * 1.5; 
           const pushY = Math.sin(angle) * force * 1.5;
           
           this.vx -= pushX;
@@ -73,7 +72,6 @@ const HeroBackground = () => {
 
     const initParticles = () => {
       particles = [];
-      // More particles
       const numberOfParticles = Math.floor((canvas.width * canvas.height) / 9000); 
       for (let i = 0; i < numberOfParticles; i++) {
         particles.push(new Particle());
@@ -93,7 +91,6 @@ const HeroBackground = () => {
 
           if (distance < 150) {
             ctx.beginPath();
-            // Darker lines for visibility
             ctx.strokeStyle = `hsla(45, 100%, 40%, ${0.4 * (1 - distance / 150)})`; 
             ctx.lineWidth = 1;
             ctx.moveTo(particles[i].x, particles[i].y);
@@ -115,7 +112,7 @@ const HeroBackground = () => {
         const dy = mouse.y - particle.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        if (distance < 250) { // Increased connection radius
+        if (distance < 250) { 
           ctx.beginPath();
           ctx.strokeStyle = `hsla(45, 100%, 40%, ${0.5 * (1 - distance / 250)})`;
           ctx.lineWidth = 1.5;

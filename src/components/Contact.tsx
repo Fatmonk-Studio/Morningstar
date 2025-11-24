@@ -87,11 +87,9 @@ const Contact = () => {
                   <MapPin className="h-6 w-6 text-gold-start" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg mb-1 text-foreground">Address</h3>
+                  <h3 className="font-semibold text-lg mb-1 text-foreground">WhatsApp</h3>
                   <p className="text-muted-foreground">
-                    123 Corporate Plaza<br />
-                    Business District<br />
-                    New York, NY 10001
+                    +1 (555) 123-4567
                   </p>
                 </div>
               </div>
