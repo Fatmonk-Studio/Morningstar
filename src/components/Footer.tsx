@@ -17,13 +17,13 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-background border-t border-border py-12 px-6">
+    <footer className="bg-background border-t border-border py-8 md:py-12 px-6">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-3 gap-12 mb-8">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12 mb-8">
 
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold bg-gradient-gold bg-clip-text text-transparent mb-4">
+            <h3 className="text-xl md:text-2xl font-bold bg-gradient-gold bg-clip-text text-transparent mb-4">
               Morningstar Limited
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed">

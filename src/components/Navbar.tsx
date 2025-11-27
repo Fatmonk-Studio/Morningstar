@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -16,7 +17,7 @@ const Navbar = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 80; // navbar height
+      const offset = 64; // navbar height
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -50,14 +51,14 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
 
           {/* Logo */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="text-2xl font-bold bg-gradient-gold bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+            className="hover:opacity-80 transition-opacity"
           >
-            Morningstar
+            <img src={logo} alt="Morningstar Logo" className="h-14 w-auto object-contain" />
           </button>
 
 
@@ -89,10 +90,10 @@ const Navbar = () => {
                 <Menu className="h-6 w-6 text-foreground" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-background border-border w-72">
+            <SheetContent side="right" className="bg-background border-border w-[80%] md:w-72">
               <div className="flex flex-col space-y-6 mt-8">
-                <div className="text-2xl font-bold bg-gradient-gold bg-clip-text text-transparent mb-4">
-                  Morningstar
+                <div className="mb-4">
+                  <img src={logo} alt="Morningstar Logo" className="h-14 w-auto object-contain" />
                 </div>
                 {navLinks.map((link) => (
                   <button

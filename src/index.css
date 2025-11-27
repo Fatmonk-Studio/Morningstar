@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
 
-    --primary: 45 100% 45%;
+    --primary: 42 88% 58%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 0 0% 96.1%;
@@ -34,14 +34,14 @@ All colors MUST be HSL.
 
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
-    --ring: 45 100% 45%;
+    --ring: 42 88% 58%;
 
     --radius: 0.5rem;
 
     /* Gold gradient colors */
-    --gold-start: 45 100% 45%;
-    --gold-mid: 43 95% 50%;
-    --gold-end: 41 90% 55%;
+    --gold-start: 42 88% 58%;
+    --gold-mid: 42 88% 63%;
+    --gold-end: 42 88% 68%;
 
     /* Gradients */
     --gradient-gold: linear-gradient(135deg, hsl(var(--gold-start)), hsl(var(--gold-mid)), hsl(var(--gold-end)));

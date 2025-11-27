@@ -20,19 +20,19 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <SlideUp delay={0.2}>
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-gold bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-8xl font-bold mb-6 bg-gradient-gold bg-clip-text text-transparent">
             Morningstar Limited
           </h1>
         </SlideUp>
         
         <SlideUp delay={0.4}>
-          <p className="text-xl md:text-2xl text-foreground/80 mb-4 max-w-3xl mx-auto">
+          <p className="text-lg md:text-2xl text-foreground/80 mb-4 max-w-3xl mx-auto">
             Illuminating Excellence Across Multiple Horizons
           </p>
         </SlideUp>
 
         <SlideUp delay={0.6}>
-          <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
             A distinguished parent company orchestrating success through our diverse portfolio of sister concerns
           </p>
         </SlideUp>
@@ -41,7 +41,7 @@ const Hero = () => {
           <Button
             onClick={() => scrollToSection("sister-concerns")}
             size="lg"
-            className="bg-gradient-gold text-primary-foreground hover:opacity-90 transition-opacity shadow-gold text-lg px-8 py-6"
+            className="bg-gradient-gold text-primary-foreground hover:opacity-90 transition-opacity shadow-gold text-base md:text-lg px-6 py-4 md:px-8 md:py-6"
           >
             Explore Our Brands
             <ArrowRight className="ml-2 h-5 w-5" />

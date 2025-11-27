@@ -32,16 +32,16 @@ const SisterConcerns = () => {
   ];
 
   return (
-    <section id="sister-concerns" className="py-24 px-6">
+    <section id="sister-concerns" className="py-12 md:py-24 px-6">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <SlideUp>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-gold bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-gold bg-clip-text text-transparent">
               Our Sister Concerns
             </h2>
           </SlideUp>
           <SlideUp delay={0.2}>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto text-justify">
               A diverse portfolio of companies united by excellence and innovation
             </p>
           </SlideUp>
@@ -52,16 +52,16 @@ const SisterConcerns = () => {
             return (
               <StaggerItem key={index}>
                 <Card
-                  className="p-8 bg-card border-border hover:border-gold-start/50 transition-all duration-500 hover:shadow-gold group hover:-translate-y-2 h-full flex flex-col"
+                  className="p-6 md:p-8 bg-card border-border hover:border-gold-start/50 transition-all duration-500 hover:shadow-gold group hover:-translate-y-2 h-full flex flex-col"
                 >
                   <div className={`mb-6 inline-flex p-1 rounded-lg bg-gradient-to-br ${concern.color} bg-opacity-10 w-fit`}>
                     <img 
                       src={concern.icon} 
                       alt={`${concern.name} logo`} 
-                      className="h-24 w-24 object-contain group-hover:scale-110 transition-transform duration-300 rounded-md" 
+                      className="h-16 w-16 md:h-24 md:w-24 object-contain group-hover:scale-110 transition-transform duration-300 rounded-md" 
                     />
                   </div>
-                  <h3 className="text-2xl font-semibold mb-4 text-foreground group-hover:text-gold-start transition-colors">
+                  <h3 className="text-xl md:text-2xl font-semibold mb-4 text-foreground group-hover:text-gold-start transition-colors">
                     {concern.name}
                   </h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed min-h-[60px] flex-grow">

@@ -38,16 +38,16 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 px-6 bg-secondary/30">
+    <section id="contact" className="py-12 md:py-24 px-6 bg-secondary/30">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <SlideUp>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-gold bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-gold bg-clip-text text-transparent">
               Get In Touch
             </h2>
           </SlideUp>
           <SlideUp delay={0.2}>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto text-justify">
               Let's discuss how Morningstar Limited can add value to your business
             </p>
           </SlideUp>
@@ -56,20 +56,20 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
 
           {/* Contact Information */}
-          <FadeIn delay={0.4} className="space-y-8">
-            <Card className="p-6 bg-card border-border hover:border-gold-start/50 transition-all">
+          <FadeIn delay={0.4} className="space-y-4 md:space-y-8">
+            <Card className="p-3 md:p-6 bg-card border-border hover:border-gold-start/50 transition-all">
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-lg bg-gradient-gold-subtle">
                   <Mail className="h-6 w-6 text-gold-start" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-1 text-foreground">Email</h3>
-                  <p className="text-muted-foreground">info@morningstar.limited</p>
+                  <p className="text-muted-foreground break-all">info@morningstar.limited</p>
                 </div>
               </div>
             </Card>
 
-            <Card className="p-6 bg-card border-border hover:border-gold-start/50 transition-all">
+            <Card className="p-3 md:p-6 bg-card border-border hover:border-gold-start/50 transition-all">
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-lg bg-gradient-gold-subtle">
                   <Phone className="h-6 w-6 text-gold-start" />
@@ -81,7 +81,7 @@ const Contact = () => {
               </div>
             </Card>
 
-            <Card className="p-6 bg-card border-border hover:border-gold-start/50 transition-all">
+            <Card className="p-3 md:p-6 bg-card border-border hover:border-gold-start/50 transition-all">
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-lg bg-gradient-gold-subtle">
                   <MapPin className="h-6 w-6 text-gold-start" />
@@ -113,7 +113,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <FadeIn delay={0.6}>
-            <Card className="p-8 bg-card border-border h-full">
+            <Card className="p-4 md:p-8 bg-card border-border h-full">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
